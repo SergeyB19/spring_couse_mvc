@@ -6,8 +6,7 @@
 <br>
 <br>
 
-<form: action = "showDetails" modelAttribute = "employee">
-
+<form:form action="showDetails" modelAttribute = "employee" method="get">
 Name <form:input path="name"/>
 <form:errors path="name"/>
 <br>
@@ -21,22 +20,18 @@ Salary <form:input path="salary"/>
 <br>
 <br>
 
-Department <form:select path="department">
+Department <form:select path="department"/>
     <form:options items="${employee.departments}"/>
     <br>
     <br>
-    Which car do you want?
-    <form: radiobuttons path="carBrand" items="${employee.carBrands}"/>
+Which car do you want?
+    <form:radiobuttons path = "carBrand" items="${employee.carBrands}"/>
+
     <br>
     <br>
     Foreign Language(s)
     <form:checkboxes path="languages" items="${employee.languageList}"/>
-    <%--    EN <form:checkbox path="languages" value="English"/>--%>
-    <%--    DE <form:checkbox path="languages" value="Deutch"/>--%>
-    <%--    FR <form:checkbox path="languages" value="French"/>--%>
-    <%--    BMW <form:radiobutton path="carBrand" value="BMW"/>--%>
-    <%--    Audi <form:radiobutton path="carBrand" value="Audi"/>--%>
-    <%--    MB <form:radiobutton path="carBrand" value="Mercedes-Benz"/>--%>
+
     <br>
     <br>
      Phone number <form:input path="phoneNumber"/>
@@ -49,20 +44,28 @@ Department <form:select path="department">
     <br>
     <input type="submit" value="OK">
 
-    </form:>
+    </form:form>
     </body>
     </html>
 
+<%--<form:select>--%>
 
-    <%--Department <form:select path="department">--%>
-    <%--    <form:option value="Information Technology" label="IT"/>--%>
-    <%--    <form:option value="Human Resourses" label="HR"/>--%>
-    <%--    <form:option value="Sales" label="Sales"/>--%>
-    <%--</form:select>--%>
+<%--    EN <form:checkbox path="languages" value="English"/>--%>
+<%--    DE <form:checkbox path="languages" value="Deutch"/>--%>
+<%--    FR <form:checkbox path="languages" value="French"/>--%>
+<%--    BMW <form:radiobutton path="carBrand" value="BMW"/>--%>
+<%--    Audi <form:radiobutton path="carBrand" value="Audi"/>--%>
+<%--    MB <form:radiobutton path="carBrand" value="Mercedes-Benz"/>--%>
+
+<%--Department <form:select path="department">--%>
+<%--    <form:option value="Information Technology" label="IT"/>--%>
+<%--    <form:option value="Human Resourses" label="HR"/>--%>
+<%--    <form:option value="Sales" label="Sales"/>--%>
+<%--</form:select>--%>
 
 
-    <%--<form action="showDetails" method="get">--%>
-    <%--    <input type="text" name="employeeName"--%>
-    <%--           placeholder="Write your name"/>--%>
+<%--<form action="showDetails" method="get">--%>
+<%--    <input type="text" name="employeeName"--%>
+<%--           placeholder="Write your name"/>--%>
 
-    <%--    <input type="submit"/>--%></form:select>
+<%--    <input type="submit"/>--%>
